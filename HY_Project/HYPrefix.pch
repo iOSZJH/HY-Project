@@ -1,0 +1,15 @@
+//
+//  HYPrefix.pch
+//  HY_Project
+//
+//  Created by 张锦辉 on 15/5/4.
+//  Copyright (c) 2015年 张锦辉. All rights reserved.
+//
+
+#ifndef HY_Project_HYPrefix_pch
+#define HY_Project_HYPrefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
