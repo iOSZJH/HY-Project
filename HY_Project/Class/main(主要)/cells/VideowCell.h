@@ -10,4 +10,8 @@
 
 @interface VideowCell : UITableViewCell
 
+-(void)configModel:(VideoModel *)model;
+@property(nonatomic)BOOL isDetails;//判断是否是详情，如果是，则图片放大
+@property (nonatomic, assign)NSInteger H;
+
 @end

@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createNav];
     // Do any additional setup after loading the view.
+}
+
+-(void)createNav
+{
+    UINavigationController *nc=[[UINavigationController alloc]initWithRootViewController:self];
+    nc.navigationController.navigationBar.backgroundColor=[UIColor redColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {

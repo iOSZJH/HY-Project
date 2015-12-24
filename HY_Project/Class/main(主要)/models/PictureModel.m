@@ -9,5 +9,8 @@
 #import "PictureModel.h"
 
 @implementation PictureModel
-
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 @end

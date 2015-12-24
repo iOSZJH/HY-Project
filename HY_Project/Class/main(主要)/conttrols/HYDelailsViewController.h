@@ -10,4 +10,12 @@
 
 @interface HYDelailsViewController : UIViewController
 
+@property(nonatomic,copy)NSString*group_id;
+@property(nonatomic,copy)NSString*UrlStr;//地址
+@property(nonatomic,assign)NSInteger category;//判断是文字还是图片
+@property(nonatomic,strong)HYGroupModel *model;
+@property(nonatomic,strong)VideoModel *vModel;
+@property(nonatomic,assign)NSNumber*numComments;
+
+
 @end

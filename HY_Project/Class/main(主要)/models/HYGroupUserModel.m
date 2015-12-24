@@ -9,5 +9,8 @@
 #import "HYGroupUserModel.h"
 
 @implementation HYGroupUserModel
-
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 @end

@@ -10,4 +10,9 @@
 
 @interface PictureModel : NSObject
 
+@property (nonatomic, copy) NSNumber* height;
+@property (nonatomic, copy) NSString* uri;
+@property (nonatomic, strong) NSArray* url_list;
+@property (nonatomic, copy) NSNumber* width;
+
 @end

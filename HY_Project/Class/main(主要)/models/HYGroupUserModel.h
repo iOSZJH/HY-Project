@@ -10,4 +10,9 @@
 
 @interface HYGroupUserModel : NSObject
 
+@property (nonatomic, copy) NSString* avatar_url;
+@property (nonatomic, copy) NSString* name;
+@property (nonatomic, assign) NSNumber* user_id;
+@property (nonatomic, assign) BOOL user_verified;
+
 @end

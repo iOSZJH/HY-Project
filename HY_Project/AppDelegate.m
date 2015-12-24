@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MainSliderViewController.h"
+#import "UMSocial.h"
+
 
 @interface AppDelegate ()
 
@@ -16,9 +19,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor=[UIColor whiteColor];
+    
+    //进行统一设置
+    [[UITableView appearance]setBackgroundColor:[UIColor clearColor]];
+    [[UITableViewCell appearance]setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0]];
+    
+    //分享
+    [UMSocialData setAppKey:APPKEY];
+    
+    //侧滑
+    MainSliderViewController *mian = (MainSliderViewController *)[MainSliderViewController sharedSliderController];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:mian];
+    self.window.rootViewController = nvc;
+
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

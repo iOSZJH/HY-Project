@@ -10,4 +10,10 @@
 
 @interface DuanziCell : UITableViewCell
 
+@property(nonatomic)BOOL isDetails;//是否进入详情
+@property(nonatomic,assign) CGFloat H;
+
+-(void)configModel:(HYGroupModel *)model;
+
+
 @end

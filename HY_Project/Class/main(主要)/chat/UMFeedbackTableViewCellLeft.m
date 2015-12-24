@@ -25,7 +25,7 @@
         self.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.textLabel.numberOfLines = 0;
         self.textLabel.textAlignment = UITextAlignmentLeft;
-        self.textLabel.textColor = [UIColor blackColor];
+        self.textLabel.textColor = COLOR;
 
         _timestampLabel = [[UILabel alloc] init];
         _timestampLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;

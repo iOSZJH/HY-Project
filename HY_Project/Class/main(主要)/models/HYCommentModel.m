@@ -9,5 +9,8 @@
 #import "HYCommentModel.h"
 
 @implementation HYCommentModel
-
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 @end

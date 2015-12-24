@@ -7,6 +7,8 @@
 //
 
 #import "MainSliderViewController.h"
+#import "HYTabBarController.h"
+#import "SettingViewController.h"
 
 @interface MainSliderViewController ()
 
@@ -15,8 +17,21 @@
 @implementation MainSliderViewController
 
 - (void)viewDidLoad {
+    
+    [self createViewController];
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    
+}
+
+
+-(void)createViewController {
+
+    HYTabBarController *tbc = [[HYTabBarController alloc] init];
+    self.MainVC = tbc;
+    
+    SettingViewController *svc = [[SettingViewController alloc] init];
+    self.LeftVC = svc;
 }
 
 - (void)didReceiveMemoryWarning {

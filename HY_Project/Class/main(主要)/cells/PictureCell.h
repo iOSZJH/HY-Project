@@ -10,4 +10,8 @@
 
 @interface PictureCell : UITableViewCell
 
+-(void)configModel:(HYGroupModel *)model;
+@property(nonatomic)BOOL isDetails;//判断是否是详情，如果是，则图片放大
+@property (nonatomic, assign)NSInteger i;
+@property (nonatomic,assign)CGFloat H;
 @end

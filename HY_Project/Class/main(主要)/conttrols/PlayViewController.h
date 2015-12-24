@@ -6,8 +6,9 @@
 //  Copyright (c) 2015年 张锦辉. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface PlayViewController : UIViewController
+
+@interface PlayViewController : MPMoviePlayerViewController
 
 @end

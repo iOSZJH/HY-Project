@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 张锦辉. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HYDelailsViewController.h"
 
-@interface FindDelailsViewController : UIViewController
+@interface FindDelailsViewController :HYDelailsViewController
 
 @end

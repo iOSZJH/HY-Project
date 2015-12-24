@@ -30,7 +30,7 @@
     UILabel *label = [[UILabel alloc] init];
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.font = [UIFont boldSystemFontOfSize:size];
-    label.textColor = MJRefreshLabelTextColor;
+    label.textColor = COLOR;//MJRefreshLabelTextColor;
     label.backgroundColor = [UIColor clearColor];
     label.textAlignment = NSTextAlignmentCenter;
     return label;
@@ -70,15 +70,16 @@
         self.backgroundColor = [UIColor clearColor];
         
         // 2.时间标签
-        [self addSubview:_lastUpdateTimeLabel = [self labelWithFontSize:12]];
+        [self addSubview:_lastUpdateTimeLabel = [self labelWithFontSize:15]];
         
         // 3.状态标签
-        [self addSubview:_statusLabel = [self labelWithFontSize:13]];
+        [self addSubview:_statusLabel = [self labelWithFontSize:17]];
         
         // 4.箭头图片
         UIImageView *arrowImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:kSrcName(@"SSTablePullRefreshViewBlueArrow.png")]];
         arrowImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         [self addSubview:_arrowImage = arrowImage];
+        
         
         // 5.指示器
         UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];

@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface CommentCell : UITableViewCell
+{
+    UIImageView*bgImageView;
+    UIImageView*titleImageView;
+    UILabel*titleLabe;
+    UILabel*commentLable;
+    UILabel*timelabel;
+}
+
+-(void)configModel:(HYCommentModel *)model;
 
 @end

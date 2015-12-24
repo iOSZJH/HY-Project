@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController1 : UIViewController
+@property (nonatomic, copy)NSString *url;
 
 @end

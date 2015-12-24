@@ -47,7 +47,7 @@
 
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, frame.size.height - 20.0f, self.frame.size.width, 16.0f)];
         label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        label.font = [UIFont systemFontOfSize:11.0f];
+        label.font = [UIFont systemFontOfSize:13];
         label.textColor = TEXT_COLOR;
         label.shadowColor = [[UIColor whiteColor] colorWithAlphaComponent:0.75];
         label.shadowOffset = CGSizeMake(0.0f, 1.0f);
@@ -84,7 +84,7 @@
         CALayer *umengLogolayer = [CALayer layer];
         umengLogolayer.frame = CGRectMake(frame.size.width / 2 - 60, frame.size.height - 65.0f, 123.0, 17.0);
         umengLogolayer.contentsGravity = kCAGravityResizeAspect;
-        umengLogolayer.contents = (id) [UIImage imageNamed:@"umeng_logo.png"].CGImage;
+        umengLogolayer.contents = (id) [UIImage imageNamed:nil].CGImage;
 
         if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
             umengLogolayer.contentsScale = [[UIScreen mainScreen] scale];
@@ -97,7 +97,7 @@
         view.frame = CGRectMake(30.0f, frame.size.height - 30.0f, 16.0f, 16.0f);
         [self addSubview:view];
         _activityView = view;
-        [view release];
+        //[view release];
 
         [self setState:UMEGOOPullRefreshNormal];
 

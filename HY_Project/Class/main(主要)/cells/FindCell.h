@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface FindCell : UITableViewCell
+{
+    UIImageView*tpImageView;
+    UILabel*nameLabel;
+    UILabel*desLabel;
+}
+-(void)config:(NSArray*)array;
 
 @end

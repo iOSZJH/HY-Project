@@ -19,7 +19,7 @@ static UITapGestureRecognizer *tapRecognizer;
 
 @implementation UINavigationBar (CustomImage)
 - (void)drawRect:(CGRect)rect {
-    UIImage *image = [UIImage imageNamed:@"nav_btn_bg"];
+    UIImage *image = [UIImage imageNamed:@"bg2"];//@"nav_btn_bg"];
     [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 @end

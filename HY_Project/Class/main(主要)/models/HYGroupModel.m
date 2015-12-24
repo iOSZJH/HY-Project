@@ -9,5 +9,8 @@
 #import "HYGroupModel.h"
 
 @implementation HYGroupModel
-
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 @end

@@ -10,4 +10,11 @@
 
 @interface HYModel : NSObject
 
+@property(nonatomic,strong)NSMutableArray *comments;
+@property(nonatomic,assign)NSNumber *display_time;
+@property(nonatomic,strong)NSDictionary *group;
+@property(nonatomic,assign)NSNumber *online_time;
+@property(nonatomic,assign)NSNumber *type;
+
+
 @end

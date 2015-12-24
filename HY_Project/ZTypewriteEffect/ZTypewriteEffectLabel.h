@@ -7,11 +7,7 @@
 //
 /** 打印机输出特效
  *  项目使用实例：让图说 -会说话的记忆
-    https://itunes.apple.com/cn/app/rang-tu-shuo-hui-shuo-hua/id903702019?l=en&mt=8
- *	Z
- *  iOS中国开发者（262091386） 群主
- *  个人开发者梦工厂- 微推（http://www.micropush.cn）
- */
+*/
 
 
 #import <UIKit/UIKit.h>

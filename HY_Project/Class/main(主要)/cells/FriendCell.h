@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface FriendCell : UITableViewCell
+{
+    UIImageView *titleImage ;
+    UILabel *nameLabel;
+    UILabel *desLabel;
+}
 
+-(void)configModel:(HYGroupModel *)model;
 @end

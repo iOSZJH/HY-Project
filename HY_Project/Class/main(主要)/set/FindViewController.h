@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FindViewController : UIViewController
-
+@property(nonatomic)NSInteger numOfView;
 @end

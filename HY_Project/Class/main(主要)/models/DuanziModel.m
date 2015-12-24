@@ -9,5 +9,8 @@
 #import "DuanziModel.h"
 
 @implementation DuanziModel
-
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 @end

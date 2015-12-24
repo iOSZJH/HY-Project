@@ -6,10 +6,72 @@
 //  Copyright (c) 2015年 张锦辉. All rights reserved.
 //
 
-#ifndef HY_Project_HYPrefix_pch
-#define HY_Project_HYPrefix_pch
+#ifdef __OBJC__
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "ZCControl.h"
+//网络请求
+#import "HttpRequestBlock.h"
+//刷新
+#import "MJRefresh.h"
+//侧滑类
+#import "MainSliderViewController.h"
+//图片加载
+#import "UIImageView+WebCache.h"
+//加载
+#import "MBProgressHUD+MJ.h"
+#import "UMSocial.h"
+
+//model
+#import "HYModel.h"
+#import "HYCommentModel.h"
+#import "HYGroupModel.h"
+#import "HYGroupUserModel.h"
+#import "DuanziModel.h"
+#import "PictureModel.h"
+#import "VideoModel.h"
+//cell
+#import "CustomView.h"
+#import "DuanziCell.h"
+#import "PictureCell.h"
+#import "VideowCell.h"
+#import "CommentCell.h"
+#import "FindCell.h"
+
+#import "SetViewController.h"
+
+//自适应
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+#define APPKEY @"5555d221e0f55abe93000803"
+
+//自定制颜色
+#define Color [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:0.1]
+#define COLOR [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]]
+
+//接口
+/*
+ 每个页面的首页 段子category_id = 1,图片 = 2；视频 = 65；
+ 每页的导航栏 推介level_id = 6,精华 = 5，热门 = 4，新鲜 = 3；
+ */
+
+//主界面（一级界面）
+#define MAIN_URL  @"http://ic.snssdk.com/2/essay/zone/category/data/?category_id=%@&level=%@&count=30&min_time=%@&iid=2693773995&device_id=3414677038&ac=wifi&channel=meizu&aid=7&app_name=joke_essay&version_code=345&device_platform=android&device_type=MX4&os_api=19&os_version=4.4.2&uuid=865479023965510&openudid=38d2e7c984952132"
+
+//附近好友列表
+#define FRIEND @"http://ic.snssdk.com/2/essay/zone/category/data/?category_id=%@&level=%@&count=30&min_time=%@&iid=2534467707&device_id=3143880924&ac=wifi&channel=360&aid=7&app_name=joke_essay&version_code=321&device_platform=iphone&device_type=ZTE%20V970&os_api=15&os_version=4.0.4&openudid=8ba2b9a00da0feda"
+
+//详情界面（二级界面）
+#define DETAILS_URL @"http://isub.snssdk.com/2/data/get_essay_comments/?group_id=%@&count=20&offset=%@&iid=2693773995&device_id=3414677038&ac=wifi&channel=meizu&aid=7&app_name=joke_essay&version_code=345&device_platform=android&device_type=MX4&os_api=19&os_version=4.4.2&uuid=865479023965510&openudid=38d2e7c984952132"
+
+//问题反馈，我的意见
+#define REPORT @"http://ichannel.snssdk.com/feedback/2/list/?appkey=essay-joke-android&count=50&iid=2693773995&device_id=3414677038&ac=wifi&channel=meizu&aid=7&app_name=joke_essay&version_code=345&device_platform=android&device_type=MX4&os_api=19&os_version=4.4.2&uuid=865479023965510&openudid=38d2e7c984952132"
+
+//常见问题
+#define PROGRAM @"http://ic.snssdk.com/faq/v2/?night_mode=0&iid=2693773995&device_id=3414677038&ac=wifi&channel=meizu&aid=7&app_name=joke_essay&version_code=345&device_platform=android&device_type=MX4&os_api=19&os_version=4.4.2&uuid=865479023965510&openudid=38d2e7c984952132"
+
+#define NBCOMMENTS @"http://ic.snssdk.com/api/2/essay/zone/god_comments/?count=20&min_time=1422276514&iid=2534467707&device_id=3143880924&ac=wifi&channel=360&aid=7&app_name=joke_essay&version_code=321&device_platform=android&device_type=ZTE%20V970&os_api=15&os_version=4.0.4&openudid=8ba2b9a00da0feda"
 
 #endif

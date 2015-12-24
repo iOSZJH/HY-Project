@@ -28,6 +28,8 @@ static SliderViewController *sharedSVC=nil;
     
     BOOL showingLeft;
     BOOL showingRight;
+    //
+    BOOL isLeft;
 }
 
 @end
@@ -84,9 +86,9 @@ static SliderViewController *sharedSVC=nil;
 }
 - (id)initWithCoder:(NSCoder *)decoder {
 	if ((self = [super initWithCoder:decoder])) {
-        _LeftSContentOffset=160;
+        _LeftSContentOffset=WIDTH-80;//160;
         _RightSContentOffset=160;
-        _LeftSContentScale=0.85;
+        _LeftSContentScale=1;
         _RightSContentScale=0.85;
         _LeftSJudgeOffset=100;
         _RightSJudgeOffset=100;
@@ -102,9 +104,9 @@ static SliderViewController *sharedSVC=nil;
 
 - (id)init{
     if (self = [super init]){
-        _LeftSContentOffset=160;
+        _LeftSContentOffset=WIDTH-80;//160;
         _RightSContentOffset=160;
-        _LeftSContentScale=0.85;
+        _LeftSContentScale=1;
         _RightSContentScale=0.85;
         _LeftSJudgeOffset=100;
         _RightSJudgeOffset=100;
@@ -360,12 +362,13 @@ static SliderViewController *sharedSVC=nil;
     {
         CGFloat panX = [panGes translationInView:_mainContentView].x;
         CGFloat finalX = currentTranslateX + panX;
-        if (finalX > _LeftSJudgeOffset)
+        if (isLeft == NO && finalX > _LeftSJudgeOffset)
         {
             if (!_canShowLeft||_LeftVC==nil) {
                 return;
             }
 
+            isLeft = YES;
             CGAffineTransform conT = [self transformWithDirection:RMoveDirectionRight];
             [UIView beginAnimations:nil context:nil];
             _mainContentView.transform = conT;
@@ -400,6 +403,7 @@ static SliderViewController *sharedSVC=nil;
         }
         else
         {
+            isLeft = NO;
             CGAffineTransform oriT = CGAffineTransformIdentity;
             [UIView beginAnimations:nil context:nil];
             _mainContentView.transform = oriT;

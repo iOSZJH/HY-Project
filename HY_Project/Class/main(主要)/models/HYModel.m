@@ -9,5 +9,8 @@
 #import "HYModel.h"
 
 @implementation HYModel
-
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 @end

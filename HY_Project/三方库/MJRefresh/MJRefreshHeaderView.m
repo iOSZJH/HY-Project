@@ -30,6 +30,7 @@
     // 1.设置边框
     self.frame = CGRectMake(0, - MJRefreshViewHeight, scrollView.frame.size.width, MJRefreshViewHeight);
     
+    
     // 2.加载时间
     self.lastUpdateTime = [[NSUserDefaults standardUserDefaults] objectForKey:MJRefreshHeaderTimeKey];
 }
